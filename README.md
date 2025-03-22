@@ -1,5 +1,5 @@
 
-# Social Media Analytics Dashboard & Average Calculator API
+# Social Media Analytics Dashboard
 
 ## Question 1: Social Media Analytics Dashboard
 
