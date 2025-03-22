@@ -3,6 +3,45 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+const theme = createTheme({
+  typography: {
+    fontFamily: 'Roboto, sans-serif',
+  },
+  palette: {
+    primary: {
+      main: '#1976d2', // A modern blue
+    },
+    secondary: {
+      main: '#9c27b0', // Stylish purple
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          textTransform: 'none',
+          fontWeight: 'bold',
+        },
+      },
+    },
+    MuiPaper: {
+      styleOverrides: {
+        root: {
+          padding: '1rem',
+          borderRadius: '16px',
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+        },
+      },
+    },
+  },
+});
+
+<ThemeProvider theme={theme}>
+  <App />
+</ThemeProvider>
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
